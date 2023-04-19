@@ -25,6 +25,9 @@ public class Post {
     @CreationTimestamp
     private Date date;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Author author;
+
     public Post() {
         super();
     }
@@ -34,6 +37,10 @@ public class Post {
         this.title = title;
         this.body = body;
     }
+
+    public void setAuthor(Author author) { this.author = author; }
+
+    public Author getAuthor() { return author; }
 
     public Long getId() {
         return id;
