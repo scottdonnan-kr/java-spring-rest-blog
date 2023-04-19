@@ -1,0 +1,4 @@
+spring:
+  data:
+    rest:
+      default-page-size: 8
